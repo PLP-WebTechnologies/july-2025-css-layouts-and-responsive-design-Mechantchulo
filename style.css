@@ -1,0 +1,136 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Page Defaults ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fafafa;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: #0057a3;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+/* ===== Navigation (Flexbox) ===== */
+.navbar {
+  background: #003f73;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* ===== Main Grid Layout ===== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== Main Content Area ===== */
+.content {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Cards (Flexbox inside content) */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #e6e6e6;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  background: #f2f2f2;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #0057a3;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
